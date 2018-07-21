@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="../lib/onsen/css/onsen-css-components.min.css">
+  <script src="../lib/onsen/js/onsenui.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="window.location='create_customer.html'" tappable>
+          Create Customer Account
+        </ons-list-item>
+        <ons-list-item onclick="window.location='find_customer.html'" tappable>
+          Find Customer Account
+        </ons-list-item>
+        <ons-list-item onclick="window.location='sign_out.html'" tappable>
+          Sign Out
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+  <template id="home.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Update Customer Informatón
+        </div>
+        <div class="right">
+          <img src="../img/icon_crossing_banks.gif">
+        </div>
+      </ons-toolbar>
+      <div style="text-align: center; margin-top: 30px;">
+        <p>
+          <ons-input id="name" modifier="underbar" placeholder="Mike" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="lastname" modifier="underbar" placeholder="Smith" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="phone" modifier="underbar" placeholder="408-555-55-55" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="email" modifier="underbar" placeholder="mikesmith200@gmail.com" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="username" modifier="underbar" placeholder="mikesmith200" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="password" modifier="underbar" type="password" placeholder="*******" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="street1" modifier="underbar" placeholder="1211 First St" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="street2" modifier="underbar" placeholder="Unit 1" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="San Jose" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="CA" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="city" modifier="underbar" placeholder="95112" float></ons-input>
+        </p>
+        <p style="margin-top: 30px;">
+          <ons-button onclick="window.location=''">Cancel</ons-button>
+          <ons-button onclick="window.location=''">Update</ons-button>
+        </p>
+        <p></p>
+      </div>
+    </ons-page>
+  </template>
+<script src="../app.js"></script>
+</body>
+</html>
